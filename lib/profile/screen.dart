@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:main/homepage/pageanjay.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -61,11 +62,16 @@ class ProfileScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // Aksi saat tombol di tekan
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomePage()));
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.teal,
               ),
-              child: const Text('Edit Profile'),
+              child: const Text(
+                'Edit Profile',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ],
         ),
